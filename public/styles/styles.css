@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  background: #393e46;
+  min-height: 100vh;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 100%;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+}
+header {
+  background-color: #fff;
+  width: 100%;
+}
+.navbar {
+  color: #393e46;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+.navbar-logo img {
+  max-width: 50px;
+  margin-bottom: 1rem;
+}
+.navbar .form form {
+  display: flex;
+}
+.navbar .form input[type="text"] {
+  background: #eee;
+  outline: none;
+  width: 300px;
+  max-width: 100%;
+  transition: padding 0.3s 0.2s ease;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: none;
+  border-radius: 15px;
+  margin-right: 0.5rem;
+}
+.navbar .form input[type="submit"] {
+  background: 0;
+  border: 0;
+  outline: none;
+  font-size: 2rem;
+  transition: padding 0.3s 0.2s ease;
+}
+input[type="submit"]:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Box */
+.box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+.box-heading {
+  background-color: #393e46;
+  opacity: 0.8;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.box-heading span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.box-body {
+  padding: 1rem 0.5rem;
+}
+.box-body_content .currentTemperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.currentTemperature-body_value {
+  font-size: 3rem;
+  font-weight: 500;
+}
