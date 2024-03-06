@@ -68,14 +68,15 @@
         <div class="box">
           <div class="box-body">
             <div class="currentTemperature-info">
+              <div class="currentTemperature-info_feels">
+                <span>Feels like</span> <%= Math.round(data.main.feels_like)%>°F
+              </div>
               <div class="currentTemperature-info_desc">
                 <%= data.weather[0].description.charAt(0).toUpperCase() +
                 data.weather[0].description.slice(1) %>
               </div>
-              <div class="currentTemperature-info_feels">
-                Feels like <%= Math.round(data.main.feels_like)%>°F
-              </div>
             </div>
+
             <div class="currentTemperature_detail">
               <ul>
                 <li>
