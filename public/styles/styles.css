@@ -45,9 +45,8 @@ header {
 .navbar .form input[type="text"] {
   background: #eee;
   outline: none;
-  width: 300px;
-  max-width: 100%;
-  transition: padding 0.3s 0.2s ease;
+  width: 100%;
+  transition: all 0.3s 0.2s ease;
   padding: 0.7rem 1rem;
   border-radius: 10px;
   border: none;
@@ -87,7 +86,7 @@ input[type="submit"]:hover {
 }
 .box-heading span {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .box-body {
   padding: 1rem 0.5rem;
@@ -101,12 +100,30 @@ input[type="submit"]:hover {
   font-size: 3rem;
   font-weight: 500;
 }
-
+.currentTemperature-info {
+  margin-bottom: 2rem;
+}
 .currentTemperature-info_feels {
-  font-size: 2rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 .currentTemperature-info_feels span {
-  font-weight: 300;
-  font-size: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  display: block;
+}
+.currentTemperature_detail ul {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+.currentTemperature_detail ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #393e46;
+}
+/* Breakpoints */
+@media (min-width: 576px) {
+  .navbar .form input[type="text"] {
+    width: 500px;
+  }
 }
