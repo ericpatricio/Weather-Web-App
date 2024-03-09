@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -14,7 +15,7 @@ const API_URL = "https://api.openweathermap.org/data/2.5/weather?";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   res.render("index.ejs", { data: "" });
 });
 
@@ -34,16 +35,3 @@ app.post("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
-
-// Get current geolocation
-function getCurrentLocation() {
-  const successCallback = position => {
-    console.log(position);
-  };
-
-  const errorCallback = error => {
-    console.log(error);
-  };
-
-  return navigator.geolocation.watchPosition(successCallback, errorCallback);
-}
